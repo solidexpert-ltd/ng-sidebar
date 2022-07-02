@@ -1,13 +1,3 @@
-# ng-sidebar
-
-⚠️　**This package is deprecated and not maintained.** ⚠️
-
----
-
-[![NPM](https://nodei.co/npm/ng-sidebar.png?compact=true)](https://nodei.co/npm/ng-sidebar)
-
-**[Demo](https://echeung.me/ng-sidebar)**
-
 *Formerly called [ng2-sidebar](https://github.com/arkon/ng2-sidebar)*
 
 An Angular sidebar component.
@@ -16,7 +6,7 @@ An Angular sidebar component.
 ## Installation
 
 ```shell
-npm install --save ng-sidebar
+npm install --save @solidexpert/ng-sidebar
 ```
 
 ### SystemJS configuration
