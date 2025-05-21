@@ -12,12 +12,12 @@ import {
   PLATFORM_ID,
   SimpleChanges
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { Sidebar } from './sidebar.component';
 
-// Based on https://github.com/angular/material2/tree/master/src/lib/sidenav
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'ng-sidebar-container',
   template: `
     <div *ngIf="showBackdrop"

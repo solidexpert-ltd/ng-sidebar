@@ -16,12 +16,14 @@ import {
   SimpleChanges,
   ViewChild
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, CommonModule } from '@angular/common';
 
 import { SidebarContainer } from './sidebar-container.component';
 import { isLTR, isIOS } from './utils';
 
 @Component({
+  standalone: true,
+  imports: [CommonModule],
   selector: 'ng-sidebar',
   template: `
     <aside #sidebar
