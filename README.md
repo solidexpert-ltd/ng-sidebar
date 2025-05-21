@@ -4,6 +4,7 @@ An Angular sidebar component.
 
 | Angular version | package version |
 | --------------- | --------------- |
+| 19.x|19.x|
 | 15.x|15.x|
 | 14.x|14.x|
 | 13.x|13.x|

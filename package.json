@@ -1,6 +1,6 @@
 {
   "name": "@solidexpert/ng-sidebar",
-  "version": "19.0.0",
+  "version": "19.0.1",
   "description": "Angular sidebar component.",
   "repository": {
     "type": "git",
@@ -16,7 +16,6 @@
     "README.md",
     "LICENSE"
   ],
-  "author": "Eugene Cheung",
   "license": "MIT",
   "keywords": [
     "angular",
