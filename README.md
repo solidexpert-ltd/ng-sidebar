@@ -1,7 +1,12 @@
-*Formerly called [ng2-sidebar](https://github.com/arkon/ng2-sidebar)*
-
 An Angular sidebar component.
 
+## Versions
+
+| Angular version | package version |
+| --------------- | --------------- |
+| 15.x|15.x|
+| 14.x|14.x|
+| 13.x|13.x|
 
 ## Installation
 

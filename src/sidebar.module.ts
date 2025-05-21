@@ -6,8 +6,7 @@ import { Sidebar } from './sidebar.component';
 import { CloseSidebar } from './close.directive';
 
 @NgModule({
-  declarations: [SidebarContainer, Sidebar, CloseSidebar],
-  imports: [CommonModule],
+  imports: [CommonModule, SidebarContainer, Sidebar, CloseSidebar],
   exports: [SidebarContainer, Sidebar, CloseSidebar]
 })
 export class SidebarModule {
