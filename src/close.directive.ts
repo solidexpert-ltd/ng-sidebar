@@ -3,6 +3,7 @@ import { Directive } from '@angular/core';
 import { Sidebar } from './sidebar.component';
 
 @Directive({
+  standalone: true,
   selector: '[closeSidebar]',
   host: {
     '(click)': '_onClick()'

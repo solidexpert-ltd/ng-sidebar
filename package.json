@@ -1,6 +1,6 @@
 {
   "name": "@solidexpert/ng-sidebar",
-  "version": "19.0.1",
+  "version": "20.0.0",
   "description": "Angular sidebar component.",
   "repository": {
     "type": "git",
@@ -35,19 +35,19 @@
     "prepare": "npm run build"
   },
   "peerDependencies": {
-    "@angular/core": ">=19.0.0",
-    "@angular/common": ">=19.0.0"
+    "@angular/core": ">=20.0.0",
+    "@angular/common": ">=20.0.0"
   },
   "devDependencies": {
-    "@angular/common": "~19.0.0",
-    "@angular/compiler": "~19.0.0",
-    "@angular/compiler-cli": "~19.0.0",
-    "@angular/core": "~19.0.0",
-    "@angular/platform-browser": "~19.0.0",
+    "@angular/common": "~20.0.0",
+    "@angular/compiler": "~20.0.0",
+    "@angular/compiler-cli": "~20.0.0",
+    "@angular/core": "~20.0.0",
+    "@angular/platform-browser": "~20.0.0",
     "rimraf": "^3.0.2",
     "rxjs": "^7.8.0",
     "tslint": "^5.20.1",
-    "typescript": "~5.5.0",
+    "typescript": "~5.8.0",
     "zone.js": "~0.15.0"
   }
 }
