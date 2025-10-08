@@ -4,6 +4,7 @@ An Angular sidebar component.
 
 | Angular version | package version |
 | --------------- | --------------- |
+| 20.x|20.x|
 | 19.x|19.x|
 | 15.x|15.x|
 | 14.x|14.x|
@@ -22,13 +23,13 @@ If you're using SystemJS, be sure to add the appropriate settings to your System
 ```js
 const map = {
   // ...
-  'ng-sidebar': 'node_modules/ng-sidebar',
+  '@solidexpert/ng-sidebar': 'node_modules/@solidexpert/ng-sidebar',
   // ...
 };
 
 const packages = {
   // ...
-  'ng-sidebar': {
+  '@solidexpert/ng-sidebar': {
     main: 'lib/index',
     defaultExtension: 'js'
   },
@@ -44,10 +45,52 @@ See the [releases page](https://github.com/arkon/ng-sidebar/releases) on GitHub.
 
 ## Usage
 
-Add `SidebarModule` to your app module:
+### Standalone Components (Recommended for Angular 14+)
+
+The library provides standalone components that can be imported directly without a module. This is the recommended approach for modern Angular applications.
+
+Import the components directly in your standalone component:
 
 ```typescript
-import { SidebarModule } from 'ng-sidebar';
+import { Component } from '@angular/core';
+import { SidebarContainer, Sidebar, CloseSidebar } from '@solidexpert/ng-sidebar';
+
+@Component({
+  standalone: true,
+  selector: 'app-root',
+  imports: [SidebarContainer, Sidebar, CloseSidebar],
+  template: `
+    <!-- Container for sidebar(s) + page content -->
+    <ng-sidebar-container>
+
+      <!-- A sidebar -->
+      <ng-sidebar [(opened)]="_opened">
+        <p>Sidebar contents</p>
+      </ng-sidebar>
+
+      <!-- Page content -->
+      <div ng-sidebar-content>
+        <button (click)="_toggleSidebar()">Toggle sidebar</button>
+      </div>
+
+    </ng-sidebar-container>
+  `
+})
+export class AppComponent {
+  private _opened: boolean = false;
+
+  private _toggleSidebar() {
+    this._opened = !this._opened;
+  }
+}
+```
+
+### Module-Based Usage (Legacy)
+
+If you're using NgModules, add `SidebarModule` to your app module:
+
+```typescript
+import { SidebarModule } from '@solidexpert/ng-sidebar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -57,7 +100,7 @@ import { SidebarModule } from 'ng-sidebar';
 class AppModule {}
 ```
 
-In your app component, simply use add a `<ng-sidebar-container>` wrapper, then place your `<ng-sidebar>`(s) and content within it.
+In your app component, simply add a `<ng-sidebar-container>` wrapper, then place your `<ng-sidebar>`(s) and content within it.
 Your page content should be in some container with a `ng-sidebar-content` attribute.
 
 ```typescript
@@ -89,9 +132,11 @@ class AppComponent {
 }
 ```
 
+### Additional Usage Examples
+
 If nothing seems to show up, your wrappers' heights may be collapsing. Try adding a height (e.g. `height: 100vh;`) to the wrapper `<ng-sidebar-container>` or other wrapper elements you may have. (See [issue #100](https://github.com/arkon/ng-sidebar/issues/100) for more info.)
 
-A directive is also provided to easily close the sidebar by clicking something inside it:
+A directive is also provided to easily close the sidebar by clicking something inside it. Make sure to import `CloseSidebar` in your component's imports array (for standalone) or in your module:
 
 ```html
 <ng-sidebar>
