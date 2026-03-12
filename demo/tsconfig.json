@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2022",
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": true,
-    "lib": ["dom", "es5", "es2015.core", "es2015.collection", "es2015.iterable", "es2015.promise"]
+    "lib": ["dom", "es2022"]
   },
   "include": [
     "src/**/*"
